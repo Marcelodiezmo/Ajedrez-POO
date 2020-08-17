@@ -14,7 +14,7 @@ class Pieza:
         self.posicion=posicion
         
         
-        pass
+       
         
     
     
@@ -199,7 +199,7 @@ class Rey(Pieza):
 class Dama(Alfil,Torre):
     def obtener_movimientos(self,posicion,tablero):
         
-        #super().obtener_movimientos(posicion,tablero)
+ 
         Torre.obtener_movimientos(self,posicion,tablero)
         Alfil.obtener_movimientos(self,posicion,tablero)
         
@@ -214,93 +214,59 @@ class Caballo(Pieza):
         
         posiciones[fila,columna] = 8
         
-        
-            #abajo  parte izquierda  largo
+     
         rfila=fila+2
         rcolumna=columna-1
         if rfila <= 7 and 0 <= rcolumna:
          
-        # posiciones[fila+1,columna]=1 #mover abajo
-         #posiciones[fila+2,columna]=1 #mover 2 abajo
-         #tablero[fila+2,columna+1]=1 #derecha
+  
          posiciones[fila+2,columna-1]=1 #izquierda
-         
-         
-         #abajo parte derecha largo
-         
+  
         rcolumna4=columna+1
         rfila4=fila+2
         if rcolumna4 <=7 and rfila4 <=7:
          
-         #posiciones[fila+1,columna]=1 
-         #posiciones[fila+2,columna]=1
+       
          posiciones[fila+2,columna+1]=1 
-         #tablero[fila-2,columna+1]=1 
-         
-        
-        #abajo parte derecha corto
+
         rfila2=fila+1
         rcolumna2=columna+2
         if rfila2 <= 7 and rcolumna2 <= 7:
-            #posiciones[fila+1,columna+1]=1 
+       
             posiciones[fila+1,columna+2]=1 
-            
-            #posiciones[fila+1,columna]=1
-        
-           
-        
-        #abajo parte izquierda corto
+      
         rfila5=fila+1
         rcolumna5=columna-2
         if rfila5 <=7  and 0 <=rcolumna5:
             posiciones[fila+1,columna-2]=1 
-          #  posiciones[fila+1,columna-1]=1 
-         
-           # posiciones[fila+1,columna]=1 
-            #tablero[fila-1,columna+1]=1 
         
-        #arriba parte izquiera corto
         rfila6=fila-1
         rcolumna6=columna-2
         if 0 <= rfila6 and 0 <=rcolumna6 :
-          #  posiciones[fila-1,columna-1]=1
+        
             posiciones[fila-1,columna-2]=1 
           
            
-           # posiciones[fila-1,columna]=1 
-          
-        #arriba parte izq largo   
+         
         rfila7=fila-2
         rcolumna7=columna-1 
         if 0 <= rfila7 and 0 <=rcolumna7 :
           
             posiciones[fila-2,columna-1]=1 
-           # posiciones[fila-2,columna]=1  
-            #posiciones[fila-1,columna]=1
-            
-        
-        #arriba parte derecha largo    
+          
         rfila10=fila-2
         rcolumna10=columna+1     
         if rcolumna10<=7  and 0 <=rfila10:
              posiciones[fila-2,columna+1]=1 
              
              
-            # posiciones[fila-2,columna]=1
-             #posiciones[fila+1,columna]=1
-             
-             
-             
-         # arriba parte derecha corto    
+           
         rfila11=fila-1
         rcolumna11=columna+2     
         if rcolumna11<=7  and 0 <=rfila11:
              posiciones[fila-1,columna+2]=1 
              
-             
-           #  posiciones[fila-1,columna]=1
-           #posiciones[fila-1,columna+1]=1
-             
+  
     
    
     
