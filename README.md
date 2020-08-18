@@ -23,13 +23,13 @@ el resultado saldrá el siguiente:
 
 Alfil\
 ```
-[0 0 0 0 0 0 0 1]\
-  [0 0 0 0 0 0 1 0]\
-   [0 0 0 0 0 1 0 0]\
-   [1 0 0 0 1 0 0 0]\
-   [0 1 0 1 0 0 0 0]\
-   [0 0 8 0 0 0 0 0]\
-   [0 1 0 1 0 0 0 0]\
+[0 0 0 0 0 0 0 1]
+  [0 0 0 0 0 0 1 0]
+   [0 0 0 0 0 1 0 0]
+   [1 0 0 0 1 0 0 0]
+   [0 1 0 1 0 0 0 0]
+   [0 0 8 0 0 0 0 0]
+   [0 1 0 1 0 0 0 0]
    [1 0 0 0 1 0 0 0]
 ```
 
@@ -41,36 +41,36 @@ luego de la posicion dada,se debe instanciar un objeto de la clase tablero para 
 
 en el caso de que no se defina el color que se quiere , quedara de color blanco por defecto
 ```
-peon=Peon()\
-peon.obtener_movimientos((5,2),tablero)\
-print("peon blanco")\
+peon=Peon()
+peon.obtener_movimientos((5,2),tablero)
+print("peon blanco")
 print(tablero)
 
 Peon blanco
 
- [0 0 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
- [0 0 1 0 0 0 0 0]\
- [0 0 8 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 1 0 0 0 0 0]
+ [0 0 8 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
  [0 0 0 0 0 0 0 0]
 
-peon=Peon(lado="negro")\
-peon.obtener_movimientos((5,2),tablero)\
-print("peon negro")\
+peon=Peon(lado="negro")
+peon.obtener_movimientos((5,2),tablero)
+print("peon negro")
 print(tablero)
  
 peon negro
 
- [0 0 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
- [0 0 8 0 0 0 0 0]\
- [0 0 1 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 8 0 0 0 0 0]
+ [0 0 1 0 0 0 0 0]
  [0 0 0 0 0 0 0 0]
  ```
  
@@ -78,23 +78,23 @@ peon negro
  * dado la posicion (2,2), se puede observar como el peon blanco puede avanzar una casilla, mientras que el peon negro puede avanzar 2 casillas.
 ``` 
  peon blanco\
-[[0 1 0 0 0 0 0 0]\
- [0 8 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
+[[0 1 0 0 0 0 0 0]
+ [0 8 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
  [0 0 0 0 0 0 0 0]]
  
 peon negro
 
-[0 0 0 0 0 0 0 0]\
- [0 8 0 0 0 0 0 0]\
- [0 1 0 0 0 0 0 0]\
- [0 1 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
+[0 0 0 0 0 0 0 0]
+ [0 8 0 0 0 0 0 0]
+ [0 1 0 0 0 0 0 0]
+ [0 1 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
  [0 0 0 0 0 0 0 0]
 ```
