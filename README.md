@@ -21,7 +21,7 @@ print(tablero)
 
 el resultado saldrá el siguiente:
 
-Alfil\
+Alfil
 ```
    [0 0 0 0 0 0 0 1]
    [0 0 0 0 0 0 1 0]
@@ -77,7 +77,7 @@ peon negro
  #### Ejemplo 3 :
  * dado la posicion (2,2), se puede observar como el peon blanco puede avanzar una casilla, mientras que el peon negro puede avanzar 2 casillas.
 ``` 
- peon blanco\
+ peon blanco
 [[0 1 0 0 0 0 0 0]
  [0 8 0 0 0 0 0 0]
  [0 0 0 0 0 0 0 0]
