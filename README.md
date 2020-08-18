@@ -9,9 +9,9 @@ movimientos de ficha de ajedrez
 #### Ejemplo 1 :
 * si se quiere mostrar los posibles movimientos de una ficha de ajedrez dada se hace lo siguiente:
 
-```tablero=Tablero()\```
-```alfil=Alfil()\```
-```alfil.obtener_movimientos((5,2),tablero)\```
+```tablero=Tablero()```\
+```alfil=Alfil()```\
+```alfil.obtener_movimientos((5,2),tablero)```\
 ```print(tablero)```
 
 el resultado saldrá el siguiente:
