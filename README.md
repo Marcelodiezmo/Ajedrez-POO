@@ -9,20 +9,22 @@ movimientos de ficha de ajedrez
 #### Ejemplos :
 si se quiere mostrar los posibles movimientos de una ficha de ajedrez dada se hace lo siguiente:
 
+tablero=Tablero()
 alfil=Alfil()
 alfil.obtener_movimientos((5,2),tablero) 
+print(tablero)
 
 el resultado saldrá el siguiente:
 
-Alfil
-[[0 0 0 0 0 0 0 1]
- [0 0 0 0 0 0 1 0]
- [0 0 0 0 0 1 0 0]
- [1 0 0 0 1 0 0 0]
- [0 1 0 1 0 0 0 0]
- [0 0 8 0 0 0 0 0]
- [0 1 0 1 0 0 0 0]
- [1 0 0 0 1 0 0 0]]
+Alfil\
+[0 0 0 0 0 0 0 1]\
+  [0 0 0 0 0 0 1 0]\
+   [0 0 0 0 0 1 0 0]\
+   [1 0 0 0 1 0 0 0]\
+   [0 1 0 1 0 0 0 0]\
+   [0 0 8 0 0 0 0 0]\
+   [0 1 0 1 0 0 0 0]\
+   [1 0 0 0 1 0 0 0]
 
-en donde se (5,2) pertenece  a la posicion  que se quiera posicionar el alfil, 
-el "5" pertenece a las filas y el "2"  a las columnas
+en donde se (5,2) pertenece  a la posicion  que se quiera posicionar el alfil, el "5" pertenece a las filas y el "2"  a las columnas.
+luego de la posicion dada,se debe instanciar un objeto de la clase tablero para poder plasmar los resultados.
