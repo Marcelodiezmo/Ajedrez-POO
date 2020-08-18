@@ -13,17 +13,10 @@ class Pieza:
     def obtener_movimientos(self,posicion,tablero):
         self.posicion=posicion
         
-        
-       
-        
-    
-    
-    
 class Alfil(Pieza):
     def obtener_movimientos(self,posicion,tablero):
         super().obtener_movimientos(posicion,tablero)
         
-
         fila,columna=self.posicion
         posiciones=tablero.tablero
         
@@ -34,8 +27,7 @@ class Alfil(Pieza):
             posiciones[fila,columna] = 1
             fila = fila - 1
             columna = columna -1
-            
-        
+                 
         #derecha superior
         fila = fila_original
         columna = columna_orignal
@@ -85,34 +77,22 @@ class Peon(Pieza):
                     posiciones[fila+2,columna] = 1
                 fila=fila+1
                 posiciones[fila,columna] = 1
-            
-        
-        
-
-        
-        
-        
-        
+               
 class Torre(Pieza):
     def obtener_movimientos(self,posicion,tablero):
         super().obtener_movimientos(posicion,tablero)
         fila,columna=self.posicion
-        posiciones=tablero.tablero
-        
-     
-        
+        posiciones=tablero.tablero         
         posiciones[:, columna] = 1
         posiciones[fila, :] = 1
         posiciones[fila,columna] = 8
         return posiciones
    
-    pass
 class Rey(Pieza):
      def obtener_movimientos(self,posicion,tablero):
         super().obtener_movimientos(posicion,tablero)
         fila,columna=self.posicion
-        posiciones=tablero.tablero
-        
+        posiciones=tablero.tablero    
         posiciones[fila,columna] = 8
         #no coge los extremos
         if (fila!=0 and columna!=0) and (fila!=7 and columna!=7):
@@ -133,15 +113,13 @@ class Rey(Pieza):
             if fila==0:
                posiciones[fila+1,columna] = 1 #abajo
                posiciones[fila,columna+1] = 1 #derecha
-              #posiciones[fila,columna-1] = 1 #izquierda
+              
                posiciones[fila+1,columna+1] = 1 #diagolan inferior derecha
-              #posiciones[fila+1,columna-1] = 1 #diagonal inferior izq
+       
             elif fila!=7:
                  posiciones[fila+1,columna] = 1 #abajo
-                 posiciones[fila,columna+1] = 1 #derecha
-                 #tablero[fila,columna-1] = 1 #izquierda
+                 posiciones[fila,columna+1] = 1 #derecha               
                  posiciones[fila+1,columna+1] = 1 #diagolan inferior derecha
-                 #tablero[fila+1,columna-1] = 1 #diagonal inferior izq
                  posiciones[fila-1,columna] = 1 #arriba
                  posiciones[fila-1,columna+1] = 1 #diagonal superior derecha
             else:
@@ -176,8 +154,7 @@ class Rey(Pieza):
                  posiciones[fila-1,columna] = 1 #arriba
                  posiciones[fila-1,columna-1] = 1 #diagonal superior izq
             else:
-                #tablero[fila,columna+1] = 1 #derecha
-                #tablero[fila-1,columna+1] = 1 #diagonal superior derecha
+               
                 posiciones[fila-1,columna] = 1 #arriba
                 posiciones[fila,columna-1] = 1 #izquierda
                 posiciones[fila-1,columna-1] = 1 #diagonal superior izq
@@ -191,86 +168,52 @@ class Rey(Pieza):
                posiciones[fila-1,columna+1] = 1 #diagonal superior derecha
                posiciones[fila-1,columna] = 1 #arriba
                
-           
-            
-           
-        
-        
+     
 class Dama(Alfil,Torre):
     def obtener_movimientos(self,posicion,tablero):
-        
- 
         Torre.obtener_movimientos(self,posicion,tablero)
         Alfil.obtener_movimientos(self,posicion,tablero)
         
     
-        
-        
 class Caballo(Pieza):
      def obtener_movimientos(self,posicion,tablero):
         super().obtener_movimientos(posicion,tablero)
         fila,columna=self.posicion
-        posiciones=tablero.tablero
-        
-        posiciones[fila,columna] = 8
-        
-     
+        posiciones=tablero.tablero    
+        posiciones[fila,columna] = 8  
         rfila=fila+2
         rcolumna=columna-1
         if rfila <= 7 and 0 <= rcolumna:
-         
-  
          posiciones[fila+2,columna-1]=1 #izquierda
-  
         rcolumna4=columna+1
         rfila4=fila+2
-        if rcolumna4 <=7 and rfila4 <=7:
-         
-       
+        if rcolumna4 <=7 and rfila4 <=7:  
          posiciones[fila+2,columna+1]=1 
-
         rfila2=fila+1
         rcolumna2=columna+2
-        if rfila2 <= 7 and rcolumna2 <= 7:
-       
-            posiciones[fila+1,columna+2]=1 
-      
+        if rfila2 <= 7 and rcolumna2 <= 7:  
+            posiciones[fila+1,columna+2]=1   
         rfila5=fila+1
         rcolumna5=columna-2
         if rfila5 <=7  and 0 <=rcolumna5:
-            posiciones[fila+1,columna-2]=1 
-        
+            posiciones[fila+1,columna-2]=1     
         rfila6=fila-1
         rcolumna6=columna-2
-        if 0 <= rfila6 and 0 <=rcolumna6 :
-        
+        if 0 <= rfila6 and 0 <=rcolumna6 :    
             posiciones[fila-1,columna-2]=1 
-          
-           
-         
         rfila7=fila-2
         rcolumna7=columna-1 
-        if 0 <= rfila7 and 0 <=rcolumna7 :
-          
-            posiciones[fila-2,columna-1]=1 
-          
+        if 0 <= rfila7 and 0 <=rcolumna7 :       
+            posiciones[fila-2,columna-1]=1        
         rfila10=fila-2
         rcolumna10=columna+1     
         if rcolumna10<=7  and 0 <=rfila10:
-             posiciones[fila-2,columna+1]=1 
-             
-             
-           
+             posiciones[fila-2,columna+1]=1              
         rfila11=fila-1
         rcolumna11=columna+2     
         if rcolumna11<=7  and 0 <=rfila11:
              posiciones[fila-1,columna+2]=1 
              
-  
-    
-   
-    
-    
 class Tablero:
     def __init__(self):
         self.reiniciar_tablero()
@@ -280,25 +223,20 @@ class Tablero:
     def __str__(self):
         return str(self.tablero)
 
-
 tablero=Tablero()
 alfil=Alfil()
 alfil.obtener_movimientos((5,2),tablero)
 print("Alfil")
 print(tablero)
 
-
 tablero.reiniciar_tablero()
-
-
-
 torre=Torre()
+
 torre.obtener_movimientos((5,2),tablero)
 print("torre")
 print(tablero)
 
 tablero.reiniciar_tablero()
-
 dama=Dama()
 dama.obtener_movimientos((5,2),tablero)
 print("Dama")
@@ -307,15 +245,13 @@ print(tablero)
 tablero.reiniciar_tablero()
 
 peon=Peon()
-peon.obtener_movimientos((5,2),tablero)
+peon.obtener_movimientos((1,1),tablero)
 print("peon blanco")
 print(tablero)
 
 tablero.reiniciar_tablero()
-
-
 peon=Peon(lado="negro")
-peon.obtener_movimientos((5,2),tablero)
+peon.obtener_movimientos((1,1),tablero)
 print("peon negro")
 print(tablero)
 
