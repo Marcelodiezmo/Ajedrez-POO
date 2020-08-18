@@ -36,9 +36,9 @@ en el caso de que no se defina el color que se quiere , quedara de color blanco 
 peon=Peon()\
 peon.obtener_movimientos((5,2),tablero)\
 print("peon blanco")\
-print(tablero)\
+print(tablero)
 
-Peon blanco\
+Peon blanco
 
  [0 0 0 0 0 0 0 0]\
  [0 0 0 0 0 0 0 0]\
