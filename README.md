@@ -31,10 +31,12 @@ luego de la posicion dada,se debe instanciar un objeto de la clase tablero para 
 
 * en la clase peon se tuvo que tener en cuenta que color pertenece el peon, ya que cada color va a diferente lado, Ademas de esto hay posiciones en especifico que puede avanzar 2 casillas en vez de una.
 
-peon=Peon()
-peon.obtener_movimientos((5,2),tablero)
-print("peon blanco")
-print(tablero)
+peon=Peon()\
+peon.obtener_movimientos((5,2),tablero)\
+print("peon blanco")\
+print(tablero)\
+
+Peon blanco
 
  [[0 0 0 0 0 0 0 0]\
  [0 0 0 0 0 0 0 0]\
@@ -43,7 +45,7 @@ print(tablero)
  [0 0 0 0 0 0 0 0]\
  [0 0 8 0 0 0 0 0]\
  [0 0 1 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]]\
+ [0 0 0 0 0 0 0 0]]
 
  
 
