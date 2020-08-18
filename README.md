@@ -12,7 +12,7 @@ movimientos de ficha de ajedrez
 '''tablero=Tablero()\
 alfil=Alfil()\
 alfil.obtener_movimientos((5,2),tablero)\
-print(tablero)
+print(tablero)'''
 
 el resultado saldrá el siguiente:
 
