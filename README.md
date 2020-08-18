@@ -7,11 +7,11 @@ movimientos de ficha de ajedrez
  finalmente hay una clase llamada "tablero" su funcion es crear el tablero del ajedrez (8x8) y poder reiniciarlo cada vez que se desea mostrar los movimientos de las fichas correspondientes.
 
 #### Ejemplos :
-si se quiere mostrar los posibles movimientos de una ficha de ajedrez dada se hace lo siguiente:
+* si se quiere mostrar los posibles movimientos de una ficha de ajedrez dada se hace lo siguiente:
 
-tablero=Tablero()
-alfil=Alfil()
-alfil.obtener_movimientos((5,2),tablero) 
+tablero=Tablero()\
+alfil=Alfil()\
+alfil.obtener_movimientos((5,2),tablero)\
 print(tablero)
 
 el resultado saldrá el siguiente:
@@ -28,3 +28,22 @@ Alfil\
 
 en donde se (5,2) pertenece  a la posicion  que se quiera posicionar el alfil, el "5" pertenece a las filas y el "2"  a las columnas.
 luego de la posicion dada,se debe instanciar un objeto de la clase tablero para poder plasmar los resultados.
+
+* en la clase peon se tuvo que tener en cuenta que color pertenece el peon, ya que cada color va a diferente lado, Ademas de esto hay posiciones en especifico que puede avanzar 2 casillas en vez de una.
+
+peon=Peon()
+peon.obtener_movimientos((5,2),tablero)
+print("peon blanco")
+print(tablero)
+
+ [[0 0 0 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]\
+ [0 0 8 0 0 0 0 0]\
+ [0 0 1 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]]\
+
+ 
+
