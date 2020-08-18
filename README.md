@@ -38,7 +38,7 @@ peon.obtener_movimientos((5,2),tablero)\
 print("peon blanco")\
 print(tablero)\
 
-Peon blanco
+Peon blanco\
 
  [0 0 0 0 0 0 0 0]\
  [0 0 0 0 0 0 0 0]\
@@ -49,17 +49,40 @@ Peon blanco
  [0 0 0 0 0 0 0 0]\
  [0 0 0 0 0 0 0 0]\
 
-peon=Peon(lado="negro")
-peon.obtener_movimientos((5,2),tablero)
-print("peon negro")
-print(tablero)
+peon=Peon(lado="negro")\
+peon.obtener_movimientos((5,2),tablero)\
+print("peon negro")\
+print(tablero)\
+ 
+peon negro\
+
+ [0 0 0 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]\
+ [0 0 8 0 0 0 0 0]\
+ [0 0 1 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]\
+ 
+ * dado la posicion (2,2), se puede observar como el peon blanco puede avanzar una casilla, mientras que el peon negro puede avanzar 2 casillas.
+ 
+ peon blanco
+[[0 1 0 0 0 0 0 0]\
+ [0 8 0 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]]\
  
 peon negro
+[[0 0 0 0 0 0 0 0]\
+ [0 8 0 0 0 0 0 0]\
+ [0 1 0 0 0 0 0 0]\
+ [0 1 0 0 0 0 0 0]\
  [0 0 0 0 0 0 0 0]\
  [0 0 0 0 0 0 0 0]\
  [0 0 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
- [0 0 8 0 0 0 0 0]\
- [0 0 1 0 0 0 0 0]\
- [0 0 0 0 0 0 0 0]\
+ [0 0 0 0 0 0 0 0]]\
