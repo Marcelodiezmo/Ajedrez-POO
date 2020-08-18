@@ -9,14 +9,20 @@ movimientos de ficha de ajedrez
 #### Ejemplo 1 :
 * si se quiere mostrar los posibles movimientos de una ficha de ajedrez dada se hace lo siguiente:
 
-```tablero=Tablero()```\
-```alfil=Alfil()```\
-```alfil.obtener_movimientos((5,2),tablero)```\
-```print(tablero)```
+```
+tablero=Tablero()
+alfil=Alfil()
+
+alfil.obtener_movimientos((5,2),tablero)
+
+print(tablero)
+
+```
 
 el resultado saldrá el siguiente:
 
 Alfil\
+```
 [0 0 0 0 0 0 0 1]\
   [0 0 0 0 0 0 1 0]\
    [0 0 0 0 0 1 0 0]\
@@ -25,6 +31,7 @@ Alfil\
    [0 0 8 0 0 0 0 0]\
    [0 1 0 1 0 0 0 0]\
    [1 0 0 0 1 0 0 0]
+```
 
 en donde se (5,2) pertenece  a la posicion  que se quiera posicionar el alfil, el "5" pertenece a las filas y el "2"  a las columnas.
 luego de la posicion dada,se debe instanciar un objeto de la clase tablero para poder plasmar los resultados.
@@ -33,7 +40,7 @@ luego de la posicion dada,se debe instanciar un objeto de la clase tablero para 
 * en la clase peon se tuvo que tener en cuenta que color pertenece el peon, ya que cada color va a diferente lado, Ademas de esto hay posiciones en especifico que puede avanzar 2 casillas en vez de una.
 
 en el caso de que no se defina el color que se quiere , quedara de color blanco por defecto
-
+```
 peon=Peon()\
 peon.obtener_movimientos((5,2),tablero)\
 print("peon blanco")\
@@ -65,10 +72,11 @@ peon negro
  [0 0 8 0 0 0 0 0]\
  [0 0 1 0 0 0 0 0]\
  [0 0 0 0 0 0 0 0]
+ ```
  
  #### Ejemplo 3 :
  * dado la posicion (2,2), se puede observar como el peon blanco puede avanzar una casilla, mientras que el peon negro puede avanzar 2 casillas.
- 
+``` 
  peon blanco\
 [[0 1 0 0 0 0 0 0]\
  [0 8 0 0 0 0 0 0]\
@@ -89,3 +97,4 @@ peon negro
  [0 0 0 0 0 0 0 0]\
  [0 0 0 0 0 0 0 0]\
  [0 0 0 0 0 0 0 0]
+```
